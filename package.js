@@ -8,8 +8,8 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.3');
+  api.versionsFrom(['1.3', '2.3', '3.0']);
   api.use(['ecmascript', 'mongo', 'underscore']);
-  api.addFiles('cleaner.js', ['client', 'server']);
+  api.mainModule('cleaner.js', ['client', 'server'])
   api.export('resetDatabase', ['client', 'server']);
 });
