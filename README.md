@@ -19,19 +19,19 @@ You can clear your database with `resetDatabase(options, callback)`. It works on
 import { resetDatabase } from 'meteor/xolvio:cleaner';
 
 // delete all collections with optional callback
-resetDatabase(null, callback);
+await resetDatabase(null);
 ```
 
 ## Provide specific database instance
 ```javascript
 // delete all collections except myCollection with optional callback
-resetDatabase({db: yourDatabaseInstance}, callback);
+await resetDatabase({db: yourDatabaseInstance});
 ```
 
 ## Don't reset certain collection
 ```javascript
 // delete all collections except myCollection with optional callback
-resetDatabase({excludedCollections: ['myCollection']}, callback);
+await resetDatabase({excludedCollections: ['myCollection']});
 ```
 
 # About Xolv.io
